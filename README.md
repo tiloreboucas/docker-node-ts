@@ -1,6 +1,7 @@
 # docker-node-ts
 repo de teste para docker / node / ts
 
+```
 witalo@Witalos-MacBook-Pro docker [master] $ docker-compose up
 Starting exemple-api ... done
 Attaching to exemple-api
@@ -14,3 +15,4 @@ exemple-api | For help, see: https://nodejs.org/en/docs/inspector
 exemple-api | app.set [Function: set]
 exemple-api | app.get [Function]
 exemple-api | app.listen [Function: listen]
+```
