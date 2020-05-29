@@ -1,27 +1,20 @@
 import * as express from "express";
 
-const PORT = 4321; // Porta do nosso servidor web
+const PORT = 3000;
 
-const app = express(); // Criamos uma instância do express
-
-app.set("port", process.env.PORT || PORT);
+const app = express();
 
 console.log("app.set", app.set);
+app.set("port", PORT);
 
-// Adicionamos uma rota de teste
+console.log("app.get", app.get);
 app.get("/", (req: express.Request, res: express.Response) => {
-    console.log("declara rota");
-
     res.json({
         message: "Docker He's Alive!",
     });
 });
 
-console.log("app.get", app.get);
-
-// Iniciamos o nosso servidor web
+console.log("app.listen", app.listen);
 app.listen(PORT, () => {
     console.log(`Aplicação escutando na porta ${PORT}`);
 });
-
-console.log("app.listen", app.listen);
