@@ -1,6 +1,6 @@
 import * as express from "express";
 
-const PORT = 3000; // Porta do nosso servidor web
+const PORT = 4321; // Porta do nosso servidor web
 
 const app = express(); // Criamos uma instância do express
 
