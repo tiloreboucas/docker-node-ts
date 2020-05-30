@@ -9,6 +9,16 @@ Repo de teste para docker / node / ts
 -   docker-compose version 1.24.1, build 4667896b
 -   docker-machine version 0.16.1, build cce350d7
 
+# Change LOG
+
+Verifiquei o docker-machine e acessando o ip do docker machine na porta determinada é possivel acessar `http://192.168.99.100:2376` o conteiner
+
+```
+$ docker-machine ls
+NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER     ERRORS
+default   *        virtualbox   Running   tcp://192.168.99.100:2376           v19.03.5
+```
+
 ## Rotina de teste
 
 Ao executar o build da aplicação na configuração citada acima, após o build ele para nos logs e não exevuta o log do `app.listen` e não e possivel acessar o navegador em `http://localhost:3000`
