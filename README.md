@@ -16,3 +16,20 @@ Ao executar o build da aplicação na configuração citada acima, após o build
 ```
 $ docker-compose up --build
 ```
+
+O container é listado
+
+```
+$ docker-compose ps
+
+   Name                  Command               State                       Ports
+-----------------------------------------------------------------------------------------------------
+exemple-api   docker-entrypoint.sh npm r ...   Up      0.0.0.0:3000->3000/tcp, 0.0.0.0:8181->8181/tcp
+```
+
+```
+$ docker ps
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                          PORTS                                            NAMES
+ecd2bd16c910        docker_api          "docker-entrypoint.s…"   2 hours ago         Up 2 minutes                    0.0.0.0:3000->3000/tcp, 0.0.0.0:8181->8181/tcp   exemple-api
+```
