@@ -11,7 +11,7 @@ Repo de teste para docker / node / ts
 
 ## Rotina de teste
 
-Ao executar o build da aplicação na configuração citada acima, após o build ele para nos logs e não exevuta o log do `app.listen` e não e possivel acessar o navegador em `http://localhost:3000`
+Ao executar o build da aplicação na configuração citada acima, após o build ele para nos logs e não executa o log do `app.listen` e não e possivel acessar o navegador em `http://localhost:3000`
 
 ```
 $ docker-compose up --build
