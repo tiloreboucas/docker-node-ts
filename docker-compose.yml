@@ -1,14 +1,41 @@
 version: "3.7"
 
+volumes:
+    data:
+        driver: local
+
 services:
+    db:
+        image: mysql/mysql-server:5.7
+        ports:
+            - "3306:3306"
+        volumes:
+            - data:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=app
+            - MYSQL_ROOT_HOST=%
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=user
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:latest
+        depends_on:
+            - "db"
+        ports:
+            - 80:80
+        environment:
+            - PMA_ARBITRARY=1
+
     api:
         build:
             context: .
-            dockerfile: Dockerfile.dev
-        container_name: exemple-api
+            dockerfile: Dockerfile
         volumes:
             - ./src:/app/src
         ports:
             - "3000:3000"
             - "8181:8181"
+        depends_on:
+            - "db"
         command: npm run start:watch

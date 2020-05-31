@@ -1,7 +1,7 @@
 {
-    "name": "example-api",
+    "name": "docker-node-api",
     "version": "0.1.0",
-    "description": "",
+    "description": "Container de teste para desenvlvimento node + ts + mysql",
     "main": "index.js",
     "scripts": {
         "start": "node --inspect=8181 -r ts-node/register ./src/index.ts",
@@ -41,5 +41,9 @@
         "ts-node": "^8.10.2",
         "ts-node-dev": "^1.0.0-pre.44",
         "typescript": "^3.9.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/tiloreboucas/docker-node-ts"
     }
 }

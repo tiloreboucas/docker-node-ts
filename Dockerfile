@@ -1,9 +1,9 @@
 FROM node:13-alpine
 
-EXPOSE 3000
-
 WORKDIR /app
 
 ADD package*.json ./
 
 RUN npm i
+
+EXPOSE 3000
